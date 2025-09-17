@@ -1,0 +1,93 @@
+model_name=Chronos
+
+python -u run.py \
+  --task_name Exp_TimeMoe \
+  --is_training 0 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_512_96 \
+  --model $model_name \
+  --data ETTh2 \
+  --features M \
+  --pretrained_path ../chronos-bolt-base \
+  --batch_size 32 \
+  --seq_len 512 \
+  --label_len 0 \
+  --pred_len 96 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run.py \
+  --task_name Exp_TimeMoe \
+  --is_training 0 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_1024_192 \
+  --model $model_name \
+  --data ETTh2 \
+  --features M \
+  --pretrained_path ../chronos-bolt-base \
+  --batch_size 32 \
+  --seq_len 1024 \
+  --label_len 0 \
+  --pred_len 192 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run.py \
+  --task_name Exp_TimeMoe \
+  --is_training 0 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_512_96 \
+  --model $model_name \
+  --data ETTh2 \
+  --features M \
+  --pretrained_path ../chronos-bolt-small \
+  --batch_size 32 \
+  --seq_len 512 \
+  --label_len 0 \
+  --pred_len 96 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run.py \
+  --task_name Exp_TimeMoe \
+  --is_training 0 \
+  --root_path ./dataset/ETT-small/ \
+  --data_path ETTh2.csv \
+  --model_id ETTh2_1024_192 \
+  --model $model_name \
+  --data ETTh2 \
+  --features M \
+  --pretrained_path ../chronos-bolt-small \
+  --batch_size 32 \
+  --seq_len 1024 \
+  --label_len 0 \
+  --pred_len 192 \
+  --e_layers 1 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 7 \
+  --dec_in 7 \
+  --c_out 7 \
+  --des 'Exp' \
+  --itr 1
